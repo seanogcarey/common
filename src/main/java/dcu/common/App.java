@@ -10,5 +10,6 @@ public class App
     {
         System.out.println( "Common test " );
         System.out.println( "Change made here " );
+        System.out.println( "Change again" );
     }
 }
