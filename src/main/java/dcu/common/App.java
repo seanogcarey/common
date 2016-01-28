@@ -10,6 +10,7 @@ public class App
     {
         System.out.println( "Common test " );
         System.out.println( "Change made here " );
-        System.out.println( "Change again" );
+        System.out.println( "Change again 2" );
+        System.out.println( "Last change" );
     }
 }
