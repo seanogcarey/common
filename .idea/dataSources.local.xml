@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="SQL Server (Microsoft) - jdbc:sqlserver://localhost;databaseName=SSMS-demo;servername=DESKTOP-2REM4RC\MSSQLSERVER2" uuid="4550bed1-cf0a-4466-97af-1cab9049bcf1">
+      <secret-storage>memory</secret-storage>
+      <user-name>seanogcarey</user-name>
+      <schema-pattern>SSMS-demo.*</schema-pattern>
+      <default-schemas>SSMS-demo.*</default-schemas>
+    </data-source>
+  </component>
+</project>
