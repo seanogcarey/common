@@ -25,10 +25,7 @@
         </property>
 
         <!-- List of XML mapping files-->
-        <mapping resource="dcu/common/src/hibernate/datamodel/Claim.hbm.xml"/>
-
-        C:\Users\seano\Documents\DCU work\CASE4\Project\SpringWorkspace\common\src\hibernate\datamodel\Claim.hbm.xml
-
+        <mapping resource="dcu/common/hibernate/Claim.hbm.xml"/>
 
     </session-factory>
 
