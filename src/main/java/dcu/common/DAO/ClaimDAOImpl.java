@@ -1,6 +1,7 @@
 package dcu.common.DAO;
 
 import dcu.common.data.Claim;
+import org.hibernate.SessionFactory;
 
 import java.util.List;
 
@@ -10,12 +11,20 @@ import java.util.List;
 public class ClaimDAOImpl implements ClaimDAO {
 
 
-    public List<Claim> getAllClaims(){
+    private static final String CLAIM_REF = "claimReference";
+
+
+    private SessionFactory sf;
+
+    public List<Claim> getAllClaims() {
+
         return null;
     }
 
     public Claim getClaimByRef(final String claimReference){
-        return null;
+
+        return (Claim) sf.getCurrentSession().getNamedQuery("getByRef")
+                .setString(CLAIM_REF, claimReference).uniqueResult();
     }
 
 
