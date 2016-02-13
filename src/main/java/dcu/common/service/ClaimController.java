@@ -2,6 +2,7 @@
 package dcu.common.service;
 
 import dcu.common.DAO.ClaimDAO;
+import dcu.common.DAO.ClaimDAOImpl;
 import dcu.common.data.Claim;
 import javassist.NotFoundException;
 //import org.apache.http.HttpEntity;
@@ -24,15 +25,73 @@ public class ClaimController {
 
 
     //Claim claim ;
-    ClaimDAO claimDAO ;
+    ClaimDAOImpl claimDAOImpl = new ClaimDAOImpl() ;
+
+    //@ResponseBody
+    //@RequestMapping(value = "/getAllClaims/",method = RequestMethod.GET)
+    public HttpEntity<List<Claim>> getClaim()
+            throws JsonMappingException,JsonGenerationException, IOException, NotFoundException{
+
+        List<Claim> claimList = claimDAOImpl.getAllClaims();
+
+        if(claimList == null){
+            throw new NotFoundException("claim does not exist");
+        }
+
+        //mapping claim here ---> appclaim, not sure if I need to do this
+
+        //List<Claim> resourceList= claimAssembler.toResources(claimList);
+
+        //return claimList;
+        return new ResponseEntity<List<Claim>>(claimList,HttpStatus.OK);
+
+
+    }
 
     @ResponseBody
+    @RequestMapping(value = "/getAllClaims/",method = RequestMethod.GET)
+    public List<Claim> getClaimList()
+            throws JsonMappingException,JsonGenerationException, IOException, NotFoundException{
+
+
+        claimDAOImpl.printmsg();
+        System.out.println("In controller now");
+        List<Claim> claimList = claimDAOImpl.getAllClaims();
+
+        System.out.println("here");
+        if(claimList == null){
+            throw new NotFoundException("claim does not exist");
+        }
+
+
+        //mapping claim here ---> appclaim, not sure if I need to do this
+
+        //List<Claim> resourceList= claimAssembler.toResources(claimList);
+
+
+        return claimList;
+
+
+    }
+/*
+    @RequestMapping(value="{name}", method = RequestMethod.GET)
+    public @ResponseBody Claim getClaimInXML(@PathVariable String name) {
+
+        Coffee coffee = new Coffee(name, 100);
+
+        return coffee;
+
+    }
+    */
+
+/*
+    @ResponseBody
     @RequestMapping(value = "/claimReference/{claimReference}",method = RequestMethod.GET)
-    public HttpEntity<List<ClaimResource>> getClaimByClaimReference
-            (@PathVariable final Integer claimReference)
+    public HttpEntity<Claim> getClaimByClaimReference
+            (@PathVariable final String claimReference)
     throws JsonMappingException,JsonGenerationException, IOException, NotFoundException{
 
-        List<Claim> claim = claimDAO.getClaimByClaimReference(claimReference);
+        Claim claim = claimDAO.getClaimByRef(claimReference);
 
         if(claim == null){
             throw new NotFoundException("claim does not exist");
@@ -40,10 +99,11 @@ public class ClaimController {
 
         //mapping claim here ---> appclaim, not sure if I need to do this
 
-        List<ClaimResource> resourceList= claimAssembler.toResources(claim);
+        List<Claim> resourceList= claimAssembler.toResources(claim);
 
-        return new ResponseEntity<List<ClaimResource>>(resourceList,HttpStatus.OK);
+        return new ResponseEntity<Claim>(resourceList,HttpStatus.OK);
 
 
     }
+    */
 }

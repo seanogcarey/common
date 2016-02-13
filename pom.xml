@@ -52,6 +52,12 @@
       <version>4.2.4.RELEASE</version>
     </dependency>
 
+    <dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>gs-managing-transactions</artifactId>
+    <version>0.1.0</version>
+    </dependency>
+
     <!-- Jackson JSON Mapper -->
     <dependency>
       <groupId>org.codehaus.jackson</groupId>

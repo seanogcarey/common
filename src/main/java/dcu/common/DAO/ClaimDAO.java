@@ -9,8 +9,8 @@ import java.util.List;
  */
 public interface ClaimDAO {
 
+        public void printmsg();
         public List<Claim> getAllClaims();
-
         public Claim getClaimByRef(final String claimReference);
 
 

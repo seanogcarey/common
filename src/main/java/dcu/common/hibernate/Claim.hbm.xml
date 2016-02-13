@@ -10,8 +10,26 @@
         </id>
 
         <property name="claimReference" type="java.lang.String">
-            <column name="claimReference"/>
+            <column name="claimReference" not-null="true"/>
         </property>
     </class>
+    <!--
+    <class name="dcu.common.hibernate.ClaimEntity" table="Claim" schema="dbo" catalog="SSMS-demo">
+        <property name="claimId">
+            <column name="claimId" sql-type="int"/>
+        </property>
+        <property name="claimReference">
+            <column name="claimReference" sql-type="sysname" not-null="true"/>
+        </property>
+    </class>
+    -->
+
+    <query name="getAllClaimsInfo">
+        <![CDATA[select claimId,claimReference from Claim]]>
+    </query>
+
+    <query name="getByRef">
+        <![CDATA[select claimId,claimReference from Claim]]>
+    </query>
 
 </hibernate-mapping>
