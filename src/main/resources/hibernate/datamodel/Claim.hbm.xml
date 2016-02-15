@@ -12,6 +12,8 @@
         <property name="claimReference" type="java.lang.String">
             <column name="claimReference" not-null="true"/>
         </property>
+        
+
     </class>
 
     <!--

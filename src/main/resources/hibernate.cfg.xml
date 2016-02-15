@@ -14,10 +14,20 @@
         <!-- Assume test is the database name -->
         <property name="hibernate.connection.url">jdbc:sqlserver://localhost;databaseName=SSMS-demo;servername=DESKTOP-2REM4RC\MSSQLSERVER2</property>
 
-        <!-- List of XML mapping files resources.hibernate.datamodel.Claim.hbm.xml    -->
-        <mapping resource="Claim.hbm.xml"/>
+        <property name="hibernate.connection.username">
+            seanogcarey
+        </property>
+        <property name="hibernate.connection.password">
+            christyring1916
+        </property>
 
-       <!-- <mapping class="dcu.common.hibernate.ClaimEntity"/> -->
+
+
+
+        <!-- List of XML mapping files resources.hibernate.datamodel.Claim.hbm.xml    -->
+        <!--<mapping resource="hibernate/datamodel/Claim.hbm.xml"/>-->
+
+       <mapping class="dcu.common.data.Claim"/>
 
     </session-factory>
 

@@ -27,7 +27,7 @@ public class SessionFactoryHelper {
 
 
             Configuration configuration = new Configuration();
-            sessionFactory = configuration.configure().buildSessionFactory();
+            sessionFactory = configuration.configure("hibernate.cfg.xml").buildSessionFactory();
 
 
             //sessionFactory = new Configuration().configure().buildSessionFactory();
