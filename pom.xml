@@ -14,6 +14,18 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>hibernate.cfg.xml</include>
+        </includes>
+      </resource>
+    </resources>
+  </build>
+
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -52,11 +64,13 @@
       <version>4.2.4.RELEASE</version>
     </dependency>
 
+    <!--
     <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>gs-managing-transactions</artifactId>
     <version>0.1.0</version>
     </dependency>
+    -->
 
     <!-- Jackson JSON Mapper -->
     <dependency>

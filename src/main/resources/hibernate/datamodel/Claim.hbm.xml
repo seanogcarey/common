@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="dcu.common.data.Claim" table="Claim" schema="dbo">
+    <class name="dcu.common.data.Claim" table="Claim" schema="dbo" catalog="SSMS-demo">
 
         <id name="claimId" type="java.lang.Integer">
             <column name= "claimId"/>
@@ -13,6 +13,13 @@
             <column name="claimReference" not-null="true"/>
         </property>
     </class>
+
+    <!--
+    <class name="dcu.common.hibernate.ClaimEntity" table="Claim" schema="dbo" catalog="SSMS-demo">
+        <property name="claimId" column="claimId"/>
+        <property name="claimReference" column="claimReference"/>
+    </class>
+    -->
     <!--
     <class name="dcu.common.hibernate.ClaimEntity" table="Claim" schema="dbo" catalog="SSMS-demo">
         <property name="claimId">

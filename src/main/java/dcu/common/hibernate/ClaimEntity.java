@@ -1,9 +1,6 @@
 package dcu.common.hibernate;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by Sean on 12/02/2016.
@@ -11,6 +8,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Claim", schema = "dbo", catalog = "SSMS-demo")
 public class ClaimEntity {
+    @Id
     private int claimId;
     private String claimReference;
 

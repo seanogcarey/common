@@ -14,9 +14,10 @@
         <!-- Assume test is the database name -->
         <property name="hibernate.connection.url">jdbc:sqlserver://localhost;databaseName=SSMS-demo;servername=DESKTOP-2REM4RC\MSSQLSERVER2</property>
 
-        <!-- List of XML mapping files-->
-        <mapping resource="dcu/common/hibernate/Claim.hbm.xml"/>
-        <mapping class="dcu.common.hibernate.ClaimEntity"/>
+        <!-- List of XML mapping files resources.hibernate.datamodel.Claim.hbm.xml    -->
+        <mapping resource="Claim.hbm.xml"/>
+
+       <!-- <mapping class="dcu.common.hibernate.ClaimEntity"/> -->
 
     </session-factory>
 
