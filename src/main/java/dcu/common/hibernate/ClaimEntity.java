@@ -12,7 +12,7 @@ public class ClaimEntity {
     private int claimId;
     private String claimReference;
 
-    @Basic
+
     @Column(name = "claimId", nullable = false)
     public int getClaimId() {
         return claimId;

@@ -12,6 +12,7 @@ import java.util.List;
 
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
+import org.hibernate.Transaction;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.HttpHeaders;
@@ -21,6 +22,8 @@ import org.springframework.http.ResponseEntity;
 /**
  * Created by Sean on 06/02/2016.
  */
+
+@RequestMapping("/claims")
 public class ClaimController {
 
 

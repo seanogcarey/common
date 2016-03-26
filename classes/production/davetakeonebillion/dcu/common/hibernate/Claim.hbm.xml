@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="dcu.common.hibernate.Claim" table="Claim" schema="dbo" catalog="SSMS-demo">
+        <id name="claimId">
+            <column name="claimId" sql-type="int"/>
+        </id>
+        <property name="claimReference">
+            <column name="claimReference" sql-type="sysname" not-null="true"/>
+        </property>
+    </class>
+
+
+
+    <query name="getAllClaimsInfo">
+
+        <![CDATA[select t.claimId as claim from Claim t]]>
+    </query>
+    <!-- SELECT t.* FROM [SSMS-demo].dbo.Claim t -->
+
+    <query name="getByRef">
+        <![CDATA[select claimId,claimReference from Claim]]>
+    </query>
+
+</hibernate-mapping>
+
+
+
+

@@ -27,7 +27,10 @@ public class SessionFactoryHelper {
 
 
             Configuration configuration = new Configuration();
+            System.out.println("dewrw");
             sessionFactory = configuration.configure("hibernate.cfg.xml").buildSessionFactory();
+            System.out.println("ccccccc");
+            //configuration.addResource("Claim.hbm.xml").configure();
 
 
             //sessionFactory = new Configuration().configure().buildSessionFactory();

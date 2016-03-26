@@ -1,9 +1,14 @@
 package dcu.common.data;
 
+import javax.persistence.*;
+
 /**
  * Created by Sean on 03/02/2016.
  */
+@Entity
+@Table(name = "Claim", schema = "dbo", catalog = "SSMS-demo")
 public class Claim {
+
 
     private Integer claimId;
 
@@ -19,6 +24,8 @@ public class Claim {
 
     }
 
+    @Id
+    @Column(name = "claimId", nullable = false)
    public Integer getClaimId(){
        return claimId;
 
@@ -29,6 +36,8 @@ public class Claim {
         this.claimId = claimId;
     }
 
+    @Basic
+    @Column(name = "claimReference", nullable = true)
     public String getClaimReference(){
 
         return claimReference;

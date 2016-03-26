@@ -9,6 +9,8 @@ import javassist.NotFoundException;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -71,6 +73,23 @@ public class App
         //java.util.List<Claim> claimList = claimDAO.getAllClaims();
 
         ClaimController claimController = new ClaimController();
+        /*
+        Session sess = factory.openSession();
+        Transaction tx;
+        try {
+            tx = sess.beginTransaction();
+            //do some work
+            List<Claim> list = claimController.getClaimList();
+            tx.commit();
+        }
+        catch (Exception e) {
+            if (tx!=null) tx.rollback();
+            throw e;
+        }
+        finally {
+            sess.close();
+        }
+        */
         List<Claim> list = claimController.getClaimList();
         //ist<Claim> claimList = claimTest.getAllClaims();
         System.out.println("Claim List: " + list);

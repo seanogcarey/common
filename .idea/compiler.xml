@@ -12,6 +12,7 @@
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
       <entry name="!?*.aj" />
+      <entry name="?*.xml" />
     </wildcardResourcePatterns>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="false">
@@ -20,8 +21,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.5" />
-      <module name="dao" target="1.5" />
-      <module name="persistance" target="1.5" />
+      <module name="commonTest" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

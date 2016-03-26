@@ -7,5 +7,11 @@
       <schema-pattern>SSMS-demo.*</schema-pattern>
       <default-schemas>SSMS-demo.*</default-schemas>
     </data-source>
+    <data-source name="SQL Server (Microsoft) - jdbc:sqlserver://localhost;databaseName=SSSMSDemo;servername=DESKTOP-2REM4RC\MSSQLSERVER2" uuid="395500de-ee9a-434f-a501-64f9c8a2d945">
+      <secret-storage>memory</secret-storage>
+      <user-name>seanogcarey</user-name>
+      <schema-pattern>SSSMSDemo.*</schema-pattern>
+      <default-schemas>SSSMSDemo.*</default-schemas>
+    </data-source>
   </component>
 </project>
